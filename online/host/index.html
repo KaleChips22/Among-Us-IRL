@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Among Us IRL</title>
+    <title>Host a Game | Among Us IRL</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div class="title">Among Us IRL Online</div>
+    <div class="back" onclick="window.location.href='..'">&lt;</div>
     <div class="button">
         <div></div>
     </div>
-    <div class="title">Among Us IRL</div>
-    <div class="roles">
-        <button onClick="window.location.href = './one-device'">Play Offline</button>
-        <button onclick="window.location.href = './online'">Play Online</button>
+    <div class="title">
+        Your Game Code: <span id="code">Loading...</span>
     </div>
+    <div class="roles">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
