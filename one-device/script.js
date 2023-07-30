@@ -90,7 +90,7 @@ function game(elem) {
             elem.innerText = 'Start Game'
             role.style.display = 'inline'
             rolesList = []
-            rolesListElem.innerHTMl = ''
+            rolesListElem.innerHTML = ''
             break
         case 1:
             elem.innerText = 'End Game'
@@ -100,7 +100,7 @@ function game(elem) {
         case 2:
             elem.innerText = 'New Game'
             button.classList.remove('big')
-            rolesListElem.innerHTML = '[' + rolesList.map(e => `<span style="color: ${colorKey[e.team]};">${e.name}</span>`).join('] [') + ']'
+            rolesListElem.innerHTML = '[' + rolesList.map(e => `<span style="color: ${colorKey[e.team]};">${e.name + (e.subroles.length > 0 ? ' | ' + e.subroles.map(e => e.name).join(' + ') : '')}</span>`).join('] [') + ']'
             break
     }
 }
