@@ -13,15 +13,18 @@
     <div class="button">
         <div></div>
     </div>
-    <div class="title">
-        Your Game Code: <span id="code">Loading...</span>
-    </div>
-    <div class="title" id="players">
+    <form method="post" action="" autocomplete="off">
+        <div class="title">
+            Enter Game Code: <input id="code" onchange="this.parentNode.parentNode.action = 'https:\/\/amongusserver.xnor.repl.co/join/' + this.value; GAME_ID = this.value">
+            <br>
+            Enter Player Name: <input id="name" name="name">
+        </div>
 
-    </div>
-    <div class="roles">
-        <button onclick="startGame()">Start Game</button>
-    </div>
+        </div>
+        <div class="roles">
+            <button type="submit" onclick="joined()">Join</button>
+        </div>
+    </form>
     <script src="script.js"></script>
 </body>
 </html>

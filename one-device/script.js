@@ -105,7 +105,7 @@ function game(elem) {
     }
 }
 
-const sound = new Audio('/sound.mp3')
+const sound = new Audio('../sound.mp3')
 
 function playSound() {
     if (gamestate == 1) sound.play()
